@@ -45,7 +45,7 @@ function readOutLoud(message) {
 
 function sayHi() {
   const speech = new SpeechSynthesisUtterance();
-  const hellotext = 'Hello, welcome back! ' + ownerName;
+  const hellotext = 'Hello, welcome back! ' + ownerName + '\n today is ' + new Date();
   speech.text = hellotext;
   speech.volume = 1;
   speech.rate = 1;
