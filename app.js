@@ -1,6 +1,6 @@
 const btn = document.querySelector(".talk");
 const content = document.querySelector(".content");
-const ownerName = 'Nhan';
+const ownerName = 'Nhân';
 
 const greetings = [
   "Im good you little of love",
@@ -24,6 +24,8 @@ recognition.onresult = function (event) {
   readOutLoud(transcript);
 };
 
+recognition.lang = 'ja-JP';
+
 btn.addEventListener("click", () => {
   recognition.start();
 });
@@ -45,7 +47,7 @@ function readOutLoud(message) {
 
 function sayHi() {
   const speech = new SpeechSynthesisUtterance();
-  const hellotext = 'Hello, welcome back! ' + ownerName + '\n today is ' + new Date();
+  const hellotext = 'Hello ' + ownerName + '\n Today is ' + new Date().toUTCString();
   speech.text = hellotext;
   speech.volume = 1;
   speech.rate = 1;
