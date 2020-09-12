@@ -24,7 +24,7 @@ recognition.onresult = function (event) {
   readOutLoud(transcript);
 };
 
-recognition.lang = 'ja-JP';
+recognition.lang = 'en-US';
 
 btn.addEventListener("click", () => {
   recognition.start();
@@ -41,7 +41,6 @@ function readOutLoud(message) {
   speech.volume = 1;
   speech.rate = 1;
   speech.pitch = 1;
-
   window.speechSynthesis.speak(speech);
 }
 
